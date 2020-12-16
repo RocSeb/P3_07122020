@@ -449,8 +449,8 @@
                             border-radius: 25px;
                             margin-bottom: 10px;
                             padding-left: 15px;
-                            width: 25vw;
-                            height: 50px;
+                            width: 20vw;
+                            height: 10%;
                             cursor: pointer;
                             input[type="checkbox"] {
                                 display: none;
@@ -464,7 +464,6 @@
                                 justify-content: center;
                                 background: $tertiaire;
                                 width: 20%;
-                                height: 100%;
                                 border-top-right-radius: 25px;
                                 border-bottom-right-radius: 25px;
                                 color: #fff;
@@ -530,8 +529,8 @@
                 }
             }
             /*****************
-    ****Responsive****
-    ******************/
+            ****Responsive****
+            ******************/
             
             @media screen and (max-width: 1200px) {
                 body {
@@ -611,7 +610,7 @@
                         width: 100vw;
                         img {
                             object-position: initial;
-                            height: auto;
+                            height: 300px;
                         }
                     }
                     .menu__container {
@@ -625,6 +624,9 @@
                                 height: 70px;
                                 display: flex;
                                 align-items: center;
+                                input[type="checkbox"]:checked+.checkcontent {
+                                    height: 100%;
+                                }
                             }
                         }
                     }
@@ -709,7 +711,7 @@
                         width: 100vw;
                         img {
                             object-position: initial;
-                            height: auto;
+                            height: 250px;
                         }
                     }
                     .menu__container {
@@ -723,6 +725,9 @@
                                 height: 70px;
                                 display: flex;
                                 align-items: center;
+                                input[type="checkbox"]:checked+.checkcontent {
+                                    height: 100%;
+                                }
                             }
                         }
                     }
