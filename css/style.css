@@ -262,7 +262,7 @@ body #restaurants__container {
   justify-content: space-around;
   border-radius: 25px 25px 25px 25px;
   width: 100vw;
-  height: 600px;
+  height: 500px;
   padding-top: 30px;
   background-color: #f0f0f0;
 }
@@ -274,7 +274,7 @@ body #restaurants__container .product__content {
   display: flex;
   flex-direction: column;
   width: 20vw;
-  height: 350px;
+  height: 320px;
   border-radius: 25px 25px 25px 25px;
   background-color: var(--second-color);
   box-shadow: 0px 0px 10px 4px rgba(177, 173, 173, 0.75);
@@ -282,19 +282,19 @@ body #restaurants__container .product__content {
   padding: 5px;
 }
 body #restaurants__container .product__content a {
-  height: 100%;
+  height: 260px;
   width: 100%;
 }
 body #restaurants__container .product__content a .content__picture {
   position: relative;
   width: 100%;
-  height: 80%;
+  height: 250px;
   border-radius: 25px 25px 0 0;
   overflow: hidden;
 }
 body #restaurants__container .product__content a .content__picture img {
   width: 120%;
-  height: 100%;
+  height: 250px;
   object-position: 30% 70%;
   object-fit: cover;
 }
@@ -378,7 +378,7 @@ body .profil__container img {
 body .menu__container {
   width: 100vw;
   background-color: #f0f0f0;
-  height: 600px;
+  height: 800px;
 }
 body .menu__container h2 {
   text-transform: uppercase;
@@ -390,6 +390,7 @@ body .menu__container span {
   display: block;
   width: 60px;
   border-bottom: 2px solid #99E2D0;
+  margin-bottom: 30px;
 }
 body .menu__container .restaurant__name {
   display: flex;
@@ -436,7 +437,8 @@ body .menu__container .plat__container {
   justify-content: space-around;
   margin-bottom: 30px;
   position: relative;
-  animation: translationLeft 3s ease-in-out;
+  transition: all 1s ease;
+  /*animation: translationLeft 3s ease-in-out;*/
 }
 body .menu__container .plat__container .plats {
   display: flex;
@@ -449,8 +451,33 @@ body .menu__container .plat__container .plats {
   margin-bottom: 10px;
   padding-left: 15px;
   width: 20vw;
-  height: 10%;
+  height: 80px;
   cursor: pointer;
+}
+body .menu__container .plat__container .plats:nth-child(1) {
+  animation: slideIn 1s ease-in-out forwards;
+}
+body .menu__container .plat__container .plats:nth-child(2) {
+  animation: slideIn 1.5s ease-in-out forwards;
+}
+body .menu__container .plat__container .plats:nth-child(3) {
+  animation: slideIn 2s ease-in-out forwards;
+}
+body .menu__container .plat__container .plats:nth-child(4) {
+  animation: slideIn 2.5s ease-in-out forwards;
+}
+@keyframes slideIn {
+  from {
+    transform: translateY(5vh) translateX(-10vw) scale(0);
+  }
+  to {
+    transform: translateY(0vh) translateX(0vw) scale(1);
+  }
+}
+body .menu__container .plat__container .plats .plat__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
 }
 body .menu__container .plat__container .plats input[type=checkbox] {
   display: none;
@@ -458,7 +485,7 @@ body .menu__container .plat__container .plats input[type=checkbox] {
 body .menu__container .plat__container .plats .checkcontent {
   display: none;
 }
-body .menu__container .plat__container .plats input[type=checkbox]:checked + .checkcontent {
+body .menu__container .plat__container .plats input[type=checkbox]:hover + .checkcontent {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -470,11 +497,11 @@ body .menu__container .plat__container .plats input[type=checkbox]:checked + .ch
   font-size: 1.6rem;
   overflow: hidden;
 }
-body .menu__container .plat__container .plats input[type=checkbox]:checked + .checkcontent i {
+body .menu__container .plat__container .plats input[type=checkbox]:hover + .checkcontent i {
   position: relative;
   animation: slidein 1s ease-in-out;
 }
-@keyframes slidein {
+@keyframes slidein-ex {
   0% {
     left: 50px;
     transform: rotate(0deg);
@@ -574,13 +601,13 @@ body .menu__container .button__explore a {
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    margin-top: 30px;
+    margin-top: 0;
   }
   body #restaurants__container {
     flex-direction: column;
     align-items: center;
     flex-wrap: nowrap;
-    height: 1800px;
+    height: 1500px;
   }
   body #restaurants__container h2 {
     text-align: center;
@@ -611,7 +638,7 @@ body .menu__container .button__explore a {
     height: 300px;
   }
   body .menu__container {
-    height: 1600px;
+    height: 1750px;
   }
   body .menu__container .plat__container {
     flex-direction: column;
@@ -624,7 +651,7 @@ body .menu__container .button__explore a {
     display: flex;
     align-items: center;
   }
-  body .menu__container .plat__container .plats input[type=checkbox]:checked + .checkcontent {
+  body .menu__container .plat__container .plats input[type=checkbox]:hover + .checkcontent {
     height: 100%;
   }
 }
@@ -653,7 +680,7 @@ body .menu__container .button__explore a {
   }
   body nav img {
     width: 150px;
-    height: 50px;
+    height: 30px;
   }
   body .slogan {
     width: 100vw;
@@ -676,11 +703,15 @@ body .menu__container .button__explore a {
     align-items: center;
     margin-top: 30px;
   }
+  body #howItWork .contentStep .stepbox {
+    margin-top: 0;
+    margin-bottom: 50px;
+  }
   body #restaurants__container {
     flex-direction: column;
     align-items: center;
     flex-wrap: nowrap;
-    height: 1800px;
+    height: 1600px;
   }
   body #restaurants__container h2 {
     text-align: center;
@@ -711,7 +742,10 @@ body .menu__container .button__explore a {
     height: 250px;
   }
   body .menu__container {
-    height: 1600px;
+    height: 1900px;
+  }
+  body .menu__container h2 {
+    margin-top: 5%;
   }
   body .menu__container .plat__container {
     flex-direction: column;
@@ -724,7 +758,7 @@ body .menu__container .button__explore a {
     display: flex;
     align-items: center;
   }
-  body .menu__container .plat__container .plats input[type=checkbox]:checked + .checkcontent {
+  body .menu__container .plat__container .plats input[type=checkbox]:hover + .checkcontent {
     height: 100%;
   }
 }
