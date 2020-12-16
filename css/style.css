@@ -436,7 +436,7 @@ body .menu__container .plat__container {
   justify-content: space-around;
   margin-bottom: 30px;
   position: relative;
-  animation: translation 3s ease-in-out;
+  animation: translationLeft 3s ease-in-out;
 }
 body .menu__container .plat__container .plats {
   display: flex;
@@ -494,7 +494,7 @@ body .menu__container .plat__container .plats .accompagnement {
   justify-content: space-between;
   padding-right: 10px;
 }
-@keyframes translation {
+@keyframes translationLeft {
   from {
     left: -100vw;
   }
@@ -603,6 +603,124 @@ body .menu__container .button__explore a {
     width: 95vw;
     height: 150px;
     padding-left: 5%;
+  }
+  body .profil__container {
+    width: 100vw;
+  }
+  body .profil__container img {
+    object-position: initial;
+    height: auto;
+  }
+  body .menu__container {
+    height: 1600px;
+  }
+  body .menu__container .plat__container {
+    flex-direction: column;
+    height: 25%;
+    align-items: center;
+  }
+  body .menu__container .plat__container .plats {
+    width: 80%;
+    height: 70px;
+    display: flex;
+    align-items: center;
+  }
+}
+@media screen and (max-width: 640px) {
+  body {
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    box-sizing: border-box;
+  }
+  body nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100px;
+  }
+  body nav a {
+    position: absolute;
+    left: 50px;
+  }
+  body nav a i {
+    font-size: 2.4rem;
+    color: #000;
+  }
+  body nav img {
+    width: 150px;
+    height: 50px;
+  }
+  body .slogan {
+    width: 100vw;
+    height: 250px;
+  }
+  body .slogan h1 {
+    font-size: 2rem;
+  }
+  body .slogan p {
+    font-size: 1.3rem;
+  }
+  body #howItWork {
+    height: 500px;
+  }
+  body #howItWork .contentStep {
+    display: flex;
+    width: 100vw;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 30px;
+  }
+  body #restaurants__container {
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: nowrap;
+    height: 1800px;
+  }
+  body #restaurants__container h2 {
+    text-align: center;
+    font-size: 1.7rem;
+  }
+  body #restaurants__container .product__content {
+    width: 80%;
+  }
+  body #restaurants__container .product__content a {
+    width: 100%;
+  }
+  body #restaurants__container .product__content a .content__picture {
+    height: 95%;
+  }
+  body footer {
+    display: flex;
+    flex-direction: column;
+    align-items: initial;
+    width: 95vw;
+    height: 150px;
+    padding-left: 5%;
+  }
+  body .profil__container {
+    width: 100vw;
+  }
+  body .profil__container img {
+    object-position: initial;
+    height: auto;
+  }
+  body .menu__container {
+    height: 1600px;
+  }
+  body .menu__container .plat__container {
+    flex-direction: column;
+    height: 25%;
+    align-items: center;
+  }
+  body .menu__container .plat__container .plats {
+    width: 80%;
+    height: 70px;
+    display: flex;
+    align-items: center;
   }
 }
 
