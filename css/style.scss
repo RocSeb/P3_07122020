@@ -3,97 +3,6 @@
             @import "imports/_variables.scss";
             /*****code css*****/
             
-            .loading {
-                width: 200px;
-                height: 200px;
-                margin: 250px auto;
-                position: relative;
-                div {
-                    position: absolute;
-                    top: 50px;
-                    left: calc((100% - 70px) / 2);
-                    width: 70px;
-                    height: 70px;
-                    border-top: 2px solid $secondaire;
-                    border-radius: 50%;
-                    animation: spin 2s linear infinite;
-                }
-                div:nth-child(2) {
-                    position: absolute;
-                    top: 60px;
-                    left: calc((100% - 70px) / 2 + 10px);
-                    width: 50px;
-                    height: 50px;
-                    border-top: 2px solid $primaire;
-                    border-radius: 50%;
-                    animation-direction: reverse;
-                    animation-duration: 1.5s;
-                }
-                div:nth-child(3) {
-                    position: absolute;
-                    top: 70px;
-                    left: calc((100% - 70px) / 2 + 20px);
-                    width: 30px;
-                    height: 30px;
-                    border-top: 2px solid $tertiaire;
-                    border-radius: 50%;
-                    animation-duration: 1s;
-                }
-                @keyframes spin {
-                    0% {
-                        transform: rotate(0deg);
-                    }
-                    100% {
-                        transform: rotate(360deg);
-                    }
-                }
-                #logo__spinner {
-                    position: absolute;
-                    top: 100%;
-                    left: -50%;
-                    path {
-                        animation: line-anim 3s ease forwards;
-                    }
-                    path:nth-child(2) {
-                        stroke-dasharray: 194px;
-                        stroke-dashoffset: 194px;
-                    }
-                    path:nth-child(3) {
-                        stroke-dasharray: 260px;
-                        stroke-dashoffset: 260px;
-                    }
-                    path:nth-child(4) {
-                        stroke-dasharray: 342px;
-                        stroke-dashoffset: 342px;
-                    }
-                    path:nth-child(5) {
-                        stroke-dasharray: 253px;
-                        stroke-dashoffset: 253px;
-                    }
-                    path:nth-child(6) {
-                        stroke-dasharray: 211px;
-                        stroke-dashoffset: 211px;
-                    }
-                    path:nth-child(7) {
-                        stroke-dasharray: 194px;
-                        stroke-dashoffset: 194px;
-                    }
-                    path:nth-child(8) {
-                        stroke-dasharray: 194px;
-                        stroke-dashoffset: 194px;
-                    }
-                    path:nth-child(9) {
-                        stroke-dasharray: 244px;
-                        stroke-dashoffset: 244px;
-                    }
-                    @keyframes line-anim {
-                        to {
-                            stroke-dashoffset: 0;
-                        }
-                    }
-                }
-            }
-            
             * {
                 margin: 0;
                 padding: 0;
@@ -242,6 +151,9 @@
                                 padding-left: 50px;
                                 margin-left: 20px;
                                 box-shadow: 10px 20px 30px -8px rgba(0, 0, 0, 0.4);
+                                &:hover {
+                                    background-color: $tertiaire;
+                                }
                                 i {
                                     margin-right: 20px;
                                     color: $secondaire;
