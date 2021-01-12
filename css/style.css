@@ -204,7 +204,25 @@ body #restaurants__container .product__content a .content__picture {
   border-radius: 25px 25px 0 0;
   overflow: hidden;
 }
+body #restaurants__container .product__content a .content__picture .new {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  width: 100px;
+  height: 30px;
+  background-color: #99E2D0;
+  top: 15px;
+  right: 15px;
+}
+body #restaurants__container .product__content a .content__picture .new p {
+  text-align: center;
+  font-weight: bold;
+  color: #006e4a;
+}
 body #restaurants__container .product__content a .content__picture img {
+  z-index: 5;
   width: 120%;
   height: 250px;
   object-position: 30% 70%;
@@ -290,17 +308,19 @@ body .profil__container img {
 body .menu__container {
   width: 100vw;
   background-color: #f0f0f0;
-  height: 800px;
+  height: 100%;
+  padding-bottom: 100px;
 }
 body .menu__container h2 {
   text-transform: uppercase;
-  margin-left: 10px;
+  margin-left: 30px;
   margin-bottom: 10px;
   font-weight: normal;
 }
 body .menu__container span {
   display: block;
   width: 60px;
+  margin-left: 30px;
   border-bottom: 2px solid #99E2D0;
   margin-bottom: 30px;
 }
@@ -386,18 +406,7 @@ body .menu__container .plat__container .plats:nth-child(4) {
     transform: translateY(0vh) translateX(0vw) scale(1);
   }
 }
-body .menu__container .plat__container .plats .plat__content {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-}
-body .menu__container .plat__container .plats input[type=checkbox] {
-  display: none;
-}
-body .menu__container .plat__container .plats .checkcontent {
-  display: none;
-}
-body .menu__container .plat__container .plats input[type=checkbox]:hover + .checkcontent {
+body .menu__container .plat__container .plats:hover .checkcontent {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -409,11 +418,22 @@ body .menu__container .plat__container .plats input[type=checkbox]:hover + .chec
   font-size: 1.6rem;
   overflow: hidden;
 }
-body .menu__container .plat__container .plats input[type=checkbox]:hover + .checkcontent i {
+body .menu__container .plat__container .plats:hover .checkcontent i {
   position: relative;
-  animation: slidein 1s ease-in-out;
+  animation: slideout 1s ease-in-out;
 }
-@keyframes slidein-ex {
+body .menu__container .plat__container .plats .plat__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+body .menu__container .plat__container .plats input[type=""] {
+  display: none;
+}
+body .menu__container .plat__container .plats .checkcontent {
+  display: none;
+}
+@keyframes slideout {
   0% {
     left: 50px;
     transform: rotate(0deg);
@@ -550,21 +570,30 @@ body .menu__container .button__explore a {
     height: 300px;
   }
   body .menu__container {
-    height: 1750px;
+    height: 100%;
+    padding-bottom: 50px;
   }
   body .menu__container .plat__container {
     flex-direction: column;
-    height: 25%;
     align-items: center;
   }
   body .menu__container .plat__container .plats {
     width: 80%;
-    height: 70px;
+    height: 100px;
     display: flex;
     align-items: center;
   }
-  body .menu__container .plat__container .plats input[type=checkbox]:hover + .checkcontent {
+  body .menu__container .plat__container .plats:hover .checkcontent {
     height: 100%;
+  }
+  body .menu__container .plat__container .plats h3 {
+    font-size: 1.8rem;
+  }
+  body .menu__container .plat__container .plats p {
+    font-size: 1.4rem;
+  }
+  body .menu__container .plat__container .plats h4 {
+    font-size: 1.4rem;
   }
 }
 @media screen and (max-width: 640px) {
@@ -654,14 +683,14 @@ body .menu__container .button__explore a {
     height: 250px;
   }
   body .menu__container {
-    height: 1900px;
+    height: 100%;
+    padding-bottom: 50px;
   }
   body .menu__container h2 {
     margin-top: 5%;
   }
   body .menu__container .plat__container {
     flex-direction: column;
-    height: 25%;
     align-items: center;
   }
   body .menu__container .plat__container .plats {
@@ -670,8 +699,17 @@ body .menu__container .button__explore a {
     display: flex;
     align-items: center;
   }
-  body .menu__container .plat__container .plats input[type=checkbox]:hover + .checkcontent {
+  body .menu__container .plat__container .plats:hover .checkcontent {
     height: 100%;
+  }
+  body .menu__container .plat__container .plats h3 {
+    font-size: 1rem;
+  }
+  body .menu__container .plat__container .plats p {
+    font-size: 0.8rem;
+  }
+  body .menu__container .plat__container .plats h4 {
+    font-size: 0.8rem;
   }
 }
 

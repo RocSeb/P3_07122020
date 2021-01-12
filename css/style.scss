@@ -199,7 +199,25 @@
                                 height: 250px;
                                 border-radius: 25px 25px 0 0;
                                 overflow: hidden;
+                                .new {
+                                    position: absolute;
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
+                                    border-radius: 5px;
+                                    width: 100px;
+                                    height: 30px;
+                                    background-color: $tertiaire;
+                                    top: 15px;
+                                    right: 15px;
+                                    p {
+                                        text-align: center;
+                                        font-weight: bold;
+                                        color: rgb(0, 110, 74);
+                                    }
+                                }
                                 img {
+                                    z-index: 5;
                                     width: 120%;
                                     height: 250px;
                                     object-position: 30% 70%;
@@ -291,16 +309,18 @@
                 .menu__container {
                     width: 100vw;
                     background-color: rgb(240, 240, 240);
-                    height: 800px;
+                    height: 100%;
+                    padding-bottom: 100px;
                     h2 {
                         text-transform: uppercase;
-                        margin-left: 10px;
+                        margin-left: 30px;
                         margin-bottom: 10px;
                         font-weight: normal;
                     }
                     span {
                         display: block;
                         width: 60px;
+                        margin-left: 30px;
                         border-bottom: 2px solid $tertiaire;
                         margin-bottom: 30px;
                     }
@@ -386,18 +406,7 @@
                                     transform: translateY(0vh) translateX(0vw) scale(1);
                                 }
                             }
-                            .plat__content {
-                                display: flex;
-                                flex-direction: column;
-                                justify-content: space-evenly;
-                            }
-                            input[type="checkbox"] {
-                                display: none;
-                            }
-                            .checkcontent {
-                                display: none;
-                            }
-                            input[type="checkbox"]:hover+.checkcontent {
+                            &:hover .checkcontent {
                                 display: flex;
                                 align-items: center;
                                 justify-content: center;
@@ -410,10 +419,21 @@
                                 overflow: hidden;
                                 i {
                                     position: relative;
-                                    animation: slidein 1s ease-in-out;
+                                    animation: slideout 1s ease-in-out;
                                 }
                             }
-                            @keyframes slidein-ex {
+                            .plat__content {
+                                display: flex;
+                                flex-direction: column;
+                                justify-content: space-evenly;
+                            }
+                            input[type=""] {
+                                display: none;
+                            }
+                            .checkcontent {
+                                display: none;
+                            }
+                            @keyframes slideout {
                                 0% {
                                     left: 50px;
                                     transform: rotate(0deg);
@@ -553,18 +573,27 @@
                         }
                     }
                     .menu__container {
-                        height: 1750px;
+                        height: 100%;
+                        padding-bottom: 50px;
                         .plat__container {
                             flex-direction: column;
-                            height: 25%;
                             align-items: center;
                             .plats {
                                 width: 80%;
-                                height: 70px;
+                                height: 100px;
                                 display: flex;
                                 align-items: center;
-                                input[type="checkbox"]:hover+.checkcontent {
+                                &:hover .checkcontent {
                                     height: 100%;
+                                }
+                                h3 {
+                                    font-size: 1.8rem;
+                                }
+                                p {
+                                    font-size: 1.4rem;
+                                }
+                                h4 {
+                                    font-size: 1.4rem;
                                 }
                             }
                         }
@@ -658,21 +687,30 @@
                         }
                     }
                     .menu__container {
-                        height: 1900px;
+                        height: 100%;
+                        padding-bottom: 50px;
                         h2 {
                             margin-top: 5%;
                         }
                         .plat__container {
                             flex-direction: column;
-                            height: 25%;
                             align-items: center;
                             .plats {
                                 width: 80%;
                                 height: 70px;
                                 display: flex;
                                 align-items: center;
-                                input[type="checkbox"]:hover+.checkcontent {
+                                &:hover .checkcontent {
                                     height: 100%;
+                                }
+                                h3 {
+                                    font-size: 1rem;
+                                }
+                                p {
+                                    font-size: 0.8rem;
+                                }
+                                h4 {
+                                    font-size: 0.8rem;
                                 }
                             }
                         }
